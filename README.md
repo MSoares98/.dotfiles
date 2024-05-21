@@ -18,7 +18,7 @@ Most of the dotfiles are based on *typecraft* videos.
 - Fzf (>= 0.52.1)
 - Pygmentize & Catppuccin [PIP]
 
-# :computer: Installation:
+# :hammer: Installation:
 
 First, make sure you have all the dependencies installed properly.
 
