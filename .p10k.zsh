@@ -1,1 +1,0 @@
-/home/msoares/.p10k.zsh
