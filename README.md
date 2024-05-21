@@ -1,12 +1,12 @@
-## NOTES:
+### :clipboard: NOTES:
 Most of the dotfiles are based on *typecraft* videos.
 
-# Terminal Configs:
+# :computer: Terminal Configs:
 - Windows Terminal
 - Catppuccin Mocha
 - SauceCode Pro Nerd Font
 
-# Dependencies:
+# :calling: Dependencies:
 - Git
 - GNU Stow (>= 2.4.0)
 - Starship (>= 1.19.0)
@@ -18,17 +18,17 @@ Most of the dotfiles are based on *typecraft* videos.
 - Fzf (>= 0.52.1)
 - Pygmentize & Catppuccin [PIP]
 
-# Installation:
+# :computer: Installation:
 
 First, make sure you have all the dependencies installed properly.
 
 Next, clone the repository and respective submodules using:
-```
-$ git clone --recurse-submodules https://github.com/MSoares98/.dotfiles.git
-$ cd .dotfiles
+```bash
+git clone --recurse-submodules https://github.com/MSoares98/.dotfiles.git
+cd .dotfiles
 ```
 
 Use GNU Stow to create the symlinks:
-```
-$ stow .
+```bash
+stow .
 ```
