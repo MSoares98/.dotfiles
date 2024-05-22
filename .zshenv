@@ -7,7 +7,10 @@ export PATH="$PATH:$HOME/.tmuxifier/bin"
 export SQUEUE_FORMAT="%.7i %9P %35j %.8u %.2t %.12M %.12L %.5C %.7m %.4D %R"
 export LESS='-R'
 export LESSOPEN='|~/.lessfilter %s'
-export ZSH_COLORIZE_STYLE="catppuccin"
+export ZSH_COLORIZE_STYLE="catppuccin-mocha"
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=10000
+export SAVEHIST=10000
 
 # Set NeoVim as default editor
 export EDITOR=nvim

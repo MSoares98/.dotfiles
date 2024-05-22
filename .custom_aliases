@@ -4,7 +4,7 @@
 alias vi='nvim'
 alias vim='nvim'
 alias rm='rm -i'
-alias sload='sinfo -N --Format="nodehost,memory,allocmem,freemem,cpus,cpusload,partitionname,statelong,cpusstate"'
+alias sload='sinfo -N --Format="nodehost,memory,allocmem,freemem,cpus,cpusload,partitionname,statelong,cpusstate,gresused"'
 
 # Functions
 extract () {
