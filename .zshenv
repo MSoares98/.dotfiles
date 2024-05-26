@@ -1,6 +1,7 @@
 # PATH
 export PATH="$PATH:$HOME/.local/bin:$HOME/bin:$HOME/.scripts"
 export PATH="$PATH:/opt/TurboVNC/bin"
+export PATH="$PATH:/sw/nvim/bin"
 export PATH="$PATH:$HOME/.tmuxifier/bin"
 
 # QOL exports
@@ -8,6 +9,7 @@ export SQUEUE_FORMAT="%.7i %9P %35j %.8u %.2t %.12M %.12L %.5C %.7m %.4D %R"
 export LESS='-R'
 export LESSOPEN='|~/.lessfilter %s'
 export ZSH_COLORIZE_STYLE="catppuccin-mocha"
+export EZA_COLORS="$(vivid generate catppuccin-mocha)"
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=10000
 export SAVEHIST=10000

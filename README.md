@@ -11,11 +11,14 @@ Most of the dotfiles are based on *typecraft* videos.
 - GNU Stow (>= 2.4.0)
 - Starship (>= 1.19.0)
 - nodejs/npm (>= v22.2.0/10.8.0)
+- Tmux (>= 3.3a)
 - NeoVim (>= v0.9.0)
 - Rust/Cargo (>= 1.72.0)
-- Exa [Cargo] (>= v0.10.1)
+- Vivid [Cargo] (>= 0.9.0)
+- Eza [Cargo] (>= v0.10.1)
 - Bat [Cargo] (>= 0.23.0)
 - Fzf (>= 0.52.1)
+- Ripgrep (>= 13.0.0)
 - Pygmentize & Catppuccin [PIP]
 
 # :hammer: Installation:
@@ -32,3 +35,7 @@ Use GNU Stow to create the symlinks:
 ```bash
 stow .
 ```
+
+# :wrench: Troubleshooting:
+
+If tmux plugins are not working properly, delete `.config/tmux/plugins/*` folders and re-install everything with TPM using <LEADER> + I. (Leader should be Ctrl + S)

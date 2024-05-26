@@ -24,7 +24,7 @@ source ~/.custom_aliases
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # LOAD PLUGINS
-source ~/.zsh_custom/plugins/exa-zsh.zsh
+source ~/.zsh_custom/plugins/eza-zsh.zsh
 source ~/.zsh_custom/plugins/colored-man-pages.plugin.zsh
 source ~/.zsh_custom/plugins/colorize.plugin.zsh
 fpath=(~/.zsh_custom/plugins/zsh-completions/src $fpath)
