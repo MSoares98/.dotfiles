@@ -18,6 +18,8 @@ return {
     lazy = false,
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      local util = require("lspconfig/util")
+      local path = util.path
 
       local lspconfig = require("lspconfig")
       lspconfig.jsonls.setup({
