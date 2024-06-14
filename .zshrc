@@ -17,8 +17,11 @@ eval "$(tmuxifier init -)"
 # LOAD STARSHIP
 eval "$(starship init zsh)"
 
-# LOAD ALIASES
+# LOAD ALIASES & MACHINE SPECIFIC ENVS
 source ~/.custom_aliases
+if [ -f ~/.custom_env ]; then
+  source ~/.custom_env
+fi
 
 # LOAD Fuzzy Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -1,7 +1,8 @@
+# Rust Cargo Env
+. "$HOME/.cargo/env"
+
 # PATH
 export PATH="$PATH:$HOME/.local/bin:$HOME/bin:$HOME/.scripts"
-export PATH="$PATH:/opt/TurboVNC/bin"
-export PATH="$PATH:/sw/nvim/bin"
 export PATH="$PATH:$HOME/.tmuxifier/bin"
 
 # QOL exports
@@ -24,5 +25,3 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
-# Rust Cargo Env
-. "$HOME/.cargo/env"
