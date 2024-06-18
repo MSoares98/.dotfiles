@@ -38,6 +38,4 @@ source ~/.zsh_custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # END, HOME and DEL functionality
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
-bindkey "^[[H"  beginning-of-line
-bindkey "^[[F"  end-of-line
 bindkey "^[[3~" delete-char
