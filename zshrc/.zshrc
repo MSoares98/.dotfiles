@@ -1,5 +1,4 @@
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+autoload -Uz compinit && compinit
 
 # Show .hidden files as normal files and set extended glob
 setopt globdots
@@ -18,10 +17,8 @@ eval "$(tmuxifier init -)"
 eval "$(starship init zsh)"
 
 # LOAD ALIASES & MACHINE SPECIFIC ENVS
-source ~/.custom_aliases
-if [ -f ~/.custom_env ]; then
-  source ~/.custom_env
-fi
+[ -f ~/.custom_aliases ] && source ~/.custom_aliases
+[ -f ~/.custom_env ] && source ~/.custom_env
 
 # LOAD Fuzzy Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

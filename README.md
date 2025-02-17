@@ -33,7 +33,8 @@ cd .dotfiles
 
 Use GNU Stow to create the symlinks:
 ```bash
-stow .
+# To create nvim symlinks
+stow nvim
 ```
 
 # :wrench: Troubleshooting:
