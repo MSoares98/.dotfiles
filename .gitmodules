@@ -1,21 +1,21 @@
 [submodule ".tmuxifier"]
-	path = .tmuxifier
+	path = tmux/.tmuxifier
 	url = https://github.com/jimeh/tmuxifier.git
 [submodule ".zsh_custom/plugins/exa-zsh"]
-	path = .zsh_custom/plugins/exa-zsh
+	path = zshrc/.zsh_custom/plugins/exa-zsh
 	url = https://github.com/MohamedElashri/exa-zsh
 [submodule ".zsh_custom/plugins/zsh-autosuggestions"]
-	path = .zsh_custom/plugins/zsh-autosuggestions
+	path = zshrc/.zsh_custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
 [submodule ".zsh_custom/plugins/zsh-completions"]
-	path = .zsh_custom/plugins/zsh-completions
+	path = zshrc/.zsh_custom/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions.git
 [submodule ".zsh_custom/plugins/zsh-autocomplete"]
-	path = .zsh_custom/plugins/zsh-autocomplete
+	path = zshrc/.zsh_custom/plugins/zsh-autocomplete
 	url = https://github.com/marlonrichert/zsh-autocomplete.git
 [submodule ".zsh_custom/plugins/zsh-syntax-highlighting"]
-	path = .zsh_custom/plugins/zsh-syntax-highlighting
+	path = zshrc/.zsh_custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule ".tmux/plugins/tpm"]
-	path = .tmux/plugins/tpm
+	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
