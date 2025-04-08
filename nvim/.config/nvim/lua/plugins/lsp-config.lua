@@ -53,11 +53,23 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
+      lspconfig.rust_analyzer.setup({
+        capabilities = capabilities
+      })
 
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
-      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show hover documentation" })
+      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Find references" })
+      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions" })
+
+      -- Add to your lsp-config.lua file within the config function
+      vim.diagnostic.config({
+        virtual_text = true,       -- Show diagnostics as virtual text
+        signs = true,              -- Show signs in the sign column
+        underline = true,          -- Underline text with diagnostics
+        update_in_insert = true,   -- Update diagnostics in insert mode
+        severity_sort = true,      -- Sort diagnostics by severity
+      })
     end,
   },
 }
