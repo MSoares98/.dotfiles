@@ -12,6 +12,20 @@ return {
     opts = {
       auto_install = true,
     },
+    config = function()
+      require("mason-lspconfig").setup({
+        ensure_installed = {
+          "astro",
+          "tailwindcss",
+          "jsonls",
+          "yamlls",
+          "bashls",
+          "pyright",
+          "lua_ls",
+        },
+        automatic_installation = true,
+      })
+    end,
   },
   {
     "neovim/nvim-lspconfig",
@@ -22,6 +36,13 @@ return {
       local path = util.path
 
       local lspconfig = require("lspconfig")
+      lspconfig.astro.setup({
+        capabilities = capabilities,
+        filetypes = { "astro" },
+      })
+      lspconfig.tailwindcss.setup({
+        capabilities = capabilities
+      })
       lspconfig.jsonls.setup({
         capabilities = capabilities
       })
@@ -53,14 +74,14 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
-      lspconfig.rust_analyzer.setup({
-        capabilities = capabilities
-      })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show hover documentation" })
+      vim.keymap.set("n", "<leader>gl", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Show diagnostics" })
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Find references" })
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions" })
+
+      vim.lsp.inlay_hint.enable(true)  -- Enable inlay hints for LSP
 
       -- Add to your lsp-config.lua file within the config function
       vim.diagnostic.config({

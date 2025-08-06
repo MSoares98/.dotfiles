@@ -44,3 +44,6 @@
 
 font-family = JetBrains Mono
 theme = catppuccin-mocha.conf
+
+#keybind = super+ctrl+plus=increase_font_size:1
+#keybind = super+ctrl+minus=decrease_font_size:1

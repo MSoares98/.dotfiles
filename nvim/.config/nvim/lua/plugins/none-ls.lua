@@ -10,6 +10,9 @@ return {
         null_ls.builtins.formatting.pyink,
       },
     })
+    null_ls.builtins.formatting.prettier.with({
+      extra_filetypes = { "svelte", "typescriptreact", "astro" },
+    })
 
     vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "Format Document" })
   end,
