@@ -1,6 +1,7 @@
 -- Set background and leader key
 vim.g.background = "light"
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 vim.opt.updatetime = 50
 
 -- Set indentation to 2 spaces
@@ -80,3 +81,26 @@ vim.api.nvim_create_user_command('Keymaps', function()
     -- Close with q
     vim.api.nvim_buf_set_keymap(buf, 'n', 'q', ':close<CR>', {noremap = true, silent = true})
 end, {})
+
+-- Toggle Wrap
+local wrapenabled = 0
+vim.keymap.set('n', '<leader>w', function()
+  vim.cmd('set wrap nolist')
+  if wrapenabled == 1 then
+    vim.cmd('set nolinebreak')
+    vim.keymap.del('n', 'j')
+    vim.keymap.del('n', 'k')
+    vim.keymap.del('n', '0')
+    vim.keymap.del('n', '^')
+    vim.keymap.del('n', '$')
+    wrapenabled = 0
+  else
+    vim.cmd('set linebreak')
+    vim.keymap.set('n', 'j', 'gj')
+    vim.keymap.set('n', 'k', 'gk')
+    vim.keymap.set('n', '0', 'g0')
+    vim.keymap.set('n', '^', 'g^')
+    vim.keymap.set('n', '$', 'g$')
+    wrapenabled = 1
+  end
+end, { desc = "Toggle Wrap" })
